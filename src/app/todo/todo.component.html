@@ -1,0 +1,12 @@
+<p style="color: red">{{ errMessage }}</p>
+
+<form (submit)="addToDo(todoitem)">
+	<input type="text" #todoitem />
+	<button type="submit">Add ToDo</button>
+</form>
+
+<ul>
+	<li *ngFor="let item of todo">
+		{{ item }} - <span style="color: red; cursor: pointer" (click)="deleteToDo(item)">Delete</span>
+	</li>
+</ul>
